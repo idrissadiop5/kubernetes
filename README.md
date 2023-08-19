@@ -1,8 +1,11 @@
 # kubernetes
 # le script install-kub-docker.sh permet d'installer docker v19.03.8, kubernetes v1.18.3 et kubectl v1.23.0 avec activation de minikube comme service via bash.
-# Exécution script
-# Après avoir cloner le répertoire, lancez les commandes ci-dessous:
+# Après avoir cloner le répertoire
 # $ cd kubernetes
+# $ vi install_kub_dock.sh
+Modifiez la ligne 49 (user) et ligne 50 (group) avec l'utilisateur qui a full privilège.
+# Exécution script
+# Lancez les commandes ci-dessous:
 # $ sudo chmod +x install_kube_dock.sh
 # $ sudo ./install_kube_dock.sh
 # $ sudo vi /etc/kubernetes/admin.conf
