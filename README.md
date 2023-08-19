@@ -5,3 +5,6 @@
 # $ cd kubernetes
 # $ sudo chmod +x install_kube_dock.sh
 # $ sudo ./install_kube_dock.sh
+# $ sudo vi /etc/kubernetes/admin.conf
+Changez la ligne 5 par le nom de votre serveur
+server: https://nom_hostname.minikube.internal:8443
