@@ -10,7 +10,7 @@ sudo yum install socat -y
 sudo yum install -y conntrack
 sudo curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
-sudo usermod -aG docker vagrant
+sudo usermod -aG docker ec2-user
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo yum -y install wget
