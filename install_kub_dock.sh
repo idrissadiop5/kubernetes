@@ -6,8 +6,8 @@ sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
 sudo systemctl status libvirtd
 sudo usermod -a -G libvirt $(whoami)
-sudo echo 'unix_sock_group = "libvirt"' > /etc/libvirt/libvirtd.conf
-sudo echo 'unix_sock_rw_perms = "0770"' > /etc/libvirt/libvirtd.conf
+echo 'unix_sock_group = "libvirt"' > /etc/libvirt/libvirtd.conf
+echo 'unix_sock_rw_perms = "0770"' > /etc/libvirt/libvirtd.conf
 # Socat gérer les requêtes entre l'hôte et le conteneur
 sudo yum install socat -y
 # Conntract gérer l'utilisation du CPU de votre machine
@@ -37,11 +37,11 @@ sudo mv minikube-linux-amd64 /usr/bin/minikube
 sudo curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.0/bin/linux/amd64/kubectl
 sudo chmod +x kubectl
 sudo mv kubectl /usr/bin/
-sudo echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
+echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
 # Pour définir le --driver avec minikube start, entrez le nom de l'hyperviseur que vous avez installé en minuscules où mettre none si vous êtes dans le cloud
 sudo minikube start --driver=none
 # Activation de minikube en tant que service
-sudo echo \
+echo \
 '[Unit]
 Description=Kickoff Minikube Cluster
 After=docker.service
