@@ -12,8 +12,8 @@ sudo echo 'unix_sock_rw_perms = "0770"' > /etc/libvirt/libvirtd.conf
 sudo yum install socat -y
 # Conntract gérer l'utilisation du CPU de votre machine
 sudo yum install -y conntrack
-sudo yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine -y
-sudo yum remove -y docker docker-common docker-selinux docker-engine-selinux docker-engine docker-ce
+#sudo yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine -y
+#sudo yum remove -y docker docker-common docker-selinux docker-engine-selinux docker-engine docker-ce
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum list docker-ce --showduplicates | sort -r    
