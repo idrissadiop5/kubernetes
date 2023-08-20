@@ -51,9 +51,9 @@ Group=vagrant
 
 [Install]
 WantedBy=multi-user.target' > /etc/systemd/system/minikube.service
-systemctl daemon-reload
-systemctl enable minikube
-systemctl start minikube
+sudo systemctl daemon-reload
+sudo systemctl enable minikube
+sudo systemctl start minikube
 # Correction du message d'erreur "The connection to the server localhost:8080 was refused - did you specify the right host or port?"
 #mkdir -p $HOME/.kube
 #sudo echo y | cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
